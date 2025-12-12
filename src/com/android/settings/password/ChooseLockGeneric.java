@@ -726,6 +726,8 @@ public class ChooseLockGeneric extends SettingsActivity {
                     getContext(), mUserId, mLockPatternUtils));
             mAutoPinConfirmPreferenceController = new AutoPinConfirmPreferenceController(
                     getContext(), mUserId, mLockPatternUtils, this);
+            mUnlockSettingsControllers.add(new PinScramblePreferenceController(
+                    getContext(), mUserId, mLockPatternUtils));
             mUnlockSettingsControllers.add(mAutoPinConfirmPreferenceController);
         }
 
